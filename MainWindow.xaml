@@ -1,0 +1,425 @@
+﻿<Window
+    x:Class="CMCS_Part1.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:CMCS_Part1"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Contract Monthly Claims System"
+    Width="800"
+    Height="450"
+    ResizeMode="NoResize"
+    mc:Ignorable="d">
+    <Grid>
+        <!--  top navigation bar  -->
+        <Grid
+            x:Name="topNav"
+            Width="800"
+            Height="70"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Background="#BEC6A0">
+            <!--  logo grid  -->
+            <Grid
+                x:Name="logo"
+                Width="100"
+                HorizontalAlignment="Left">
+                <Grid.Background>
+                    <ImageBrush ImageSource="C:\Users\RC_Student_lab\OneDrive - ADvTECH Ltd\CMCS_Part1\images\CMCS_logo.png" Stretch="Uniform" />
+                </Grid.Background>
+            </Grid>
+            <TextBlock
+                Width="300"
+                Margin="105,0,395,0"
+                VerticalAlignment="Center"
+                FontFamily="ariel"
+                FontSize="30"
+                FontWeight="Medium"
+                Foreground="#0F2A33">
+                CMCS
+            </TextBlock>
+        </Grid>
+
+        <!--  landing page  -->
+
+        <Grid x:Name="landing_page" Visibility="Visible">
+
+            <!--  landing page main content  -->
+            <Grid Height="360" VerticalAlignment="Bottom">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="140" />
+                    <RowDefinition Height="140" />
+
+                </Grid.RowDefinitions>
+                <!--  logo  -->
+                <Grid
+                    Grid.Row="1"
+                    Width="150"
+                    Height="140"
+                    Margin="145,0,505,0">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="C:\Users\RC_Student_lab\OneDrive - ADvTECH Ltd\CMCS_Part1\images\CMCS_logo.png" Stretch="Uniform" />
+                    </Grid.Background>
+                </Grid>
+                <!--  application name  -->
+                <TextBlock
+                    Grid.Row="1"
+                    Width="300"
+                    Margin="300,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    FontFamily="inter"
+                    FontSize="30"
+                    FontStretch="Normal"
+                    FontWeight="Medium"
+                    Foreground="#0F2A33"
+                    RenderTransformOrigin="0.487,0.611"
+                    TextWrapping="Wrap">
+                    CONTRACT MONTHLY CLAIMS SYSTEM
+                </TextBlock>
+                <!--  lecturer button  -->
+                <Button
+                    x:Name="lecturerButton"
+                    Grid.Row="2"
+                    Height="25"
+                    Margin="145,20,551,94"
+                    Background="#708871"
+                    BorderBrush="Transparent"
+                    Click="lecturerButton_Click"
+                    Cursor="Hand"
+                    Foreground="#0F2A33">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
+                    LECTURER
+                </Button>
+                <!--  program coordinator button  -->
+                <Button
+                    x:Name="coordinatorButton"
+                    Grid.Row="2"
+                    Height="25"
+                    Margin="327,20,364,94"
+                    Background="#708871"
+                    BorderBrush="Transparent"
+                    Click="coordinatorButton_Click"
+                    Cursor="Hand"
+                    Foreground="#0F2A33">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
+                    COORDINATOR
+                </Button>
+                <!--  Academic manager button  -->
+                <Button
+                    x:Name="managerButton"
+                    Grid.Row="2"
+                    Height="25"
+                    Margin="500,20,190,94"
+                    Background="#708871"
+                    BorderBrush="Transparent"
+                    Click="managerButton_Click"
+                    Cursor="Hand"
+                    Foreground="#0F2A33">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
+                    MANAGER
+                </Button>
+
+            </Grid>
+        </Grid>
+        <!--  *********************************************************  -->
+
+        <!--  lecturers page  -->
+        <Grid x:Name="lecturers_page" Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70" />
+                <RowDefinition Height="380" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid Height="380" VerticalAlignment="Bottom">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="670" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--  side nav  -->
+                    <Grid
+                        Grid.Column="0"
+                        Width="130"
+                        Height="380"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Background="#606676">
+
+                        <Button
+                            x:Name="dashboardButton"
+                            Height="35"
+                            Margin="0,2,0,0"
+                            Padding="5"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Click="dashboardButton_Click"
+                            FontSize="15"
+                            Foreground="White">
+                            > Dashboard
+                        </Button>
+
+                        <Grid
+                            Height="35"
+                            Margin="0,35,0,305"
+                            Background="#FEF3E2" />
+
+                        <Button
+                            Height="35"
+                            Margin="0,38,0,0"
+                            Padding="5"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            FontSize="15">
+                            > New Claim
+                        </Button>
+
+                        <Button
+                            Height="35"
+                            Margin="0,73,0,0"
+                            Padding="5"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            FontSize="15"
+                            Foreground="White">
+                            > Approval status
+                        </Button>
+                    </Grid>
+
+                    <!--  main window  -->
+                    <Grid Grid.Column="1" Background="#FEF3E2">
+                        <StackPanel>
+                            <TextBlock
+                                Margin="213,9,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                FontFamily="ariel"
+                                FontSize="20"
+                                FontWeight="Medium"
+                                Foreground="#0F2A33">
+                                LECTURER
+                            </TextBlock>
+
+                            <StackPanel Margin="5" Orientation="Horizontal">
+                                <Label
+                                    Width="130"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Top"
+                                    FontSize="15"
+                                    Foreground="#0F2A33">
+                                    First Name:
+                                </Label>
+                                <TextBox Width="400" Height="25" />
+                            </StackPanel>
+
+                            <StackPanel Margin="5" Orientation="Horizontal">
+                                <Label
+                                    Width="130"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Top"
+                                    FontSize="15"
+                                    Foreground="#0F2A33">
+                                    Last Name:
+                                </Label>
+                                <TextBox Width="400" Height="25" />
+                            </StackPanel>
+
+                            <StackPanel Margin="5" Orientation="Horizontal">
+                                <Label
+                                    Width="130"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Top"
+                                    Content="Email Address:"
+                                    FontSize="15"
+                                    Foreground="#0F2A33" />
+                                <TextBox Width="400" Height="25" />
+                            </StackPanel>
+
+                            <StackPanel Margin="5" Orientation="Horizontal">
+                                <Label
+                                    Width="130"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Top"
+                                    FontSize="15"
+                                    Foreground="#0F2A33">
+                                    Hourly Rate:
+                                </Label>
+                                <TextBox Width="80" Height="25" />
+                            </StackPanel>
+
+                            <StackPanel Margin="5" Orientation="Horizontal">
+                                <Label
+                                    Width="130"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Top"
+                                    FontSize="15"
+                                    Foreground="#0F2A33">
+                                    Hours Worked:
+                                </Label>
+                                <TextBox Width="80" Height="25" />
+                            </StackPanel>
+
+                            <StackPanel Margin="5" Orientation="Horizontal">
+                                <Label
+                                    Width="130"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Top"
+                                    FontSize="15"
+                                    Foreground="#0F2A33">
+                                    Hourly Rate:
+                                </Label>
+                                <Button
+                                    Name="UploadButton"
+                                    Width="110"
+                                    Content="Submit Document" />
+                            </StackPanel>
+                            <StackPanel>
+                                <Button
+                                    x:Name="submitButton"
+                                    Width="200"
+                                    Height="30"
+                                    Margin="0,15,0,15"
+                                    Background="#708871"
+                                    BorderBrush="Transparent"
+                                    Cursor="Hand"
+                                    Foreground="#0F2A33">
+
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="10" />
+                                        </Style>
+                                    </Button.Resources>
+                                    submit
+                                </Button>
+                            </StackPanel>
+
+                        </StackPanel>
+
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+        <!--  *********************************************************  -->
+
+        <!--  lecturers page  -->
+        <Grid x:Name="coordinator_page" Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70" />
+                <RowDefinition Height="380" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid Height="380" VerticalAlignment="Bottom">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="670" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--  side nav  -->
+                    <Grid
+                        Grid.Column="0"
+                        Width="130"
+                        Height="380"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Background="#606676">
+
+                        <Button
+                            x:Name="dashboardButton1"
+                            Height="35"
+                            Margin="0,2,0,0"
+                            Padding="5"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Click="dashboardButton_Click"
+                            FontSize="15"
+                            Foreground="White">
+                            > Dashboard
+                        </Button>
+
+                        <Grid
+                            Height="35"
+                            Margin="0,35,0,305"
+                            Background="#FEF3E2" />
+
+                        <Button
+                            Height="35"
+                            Margin="0,38,0,0"
+                            Padding="5"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            FontSize="15">
+                            > New Claim
+                        </Button>
+
+                        <Button
+                            Height="35"
+                            Margin="0,73,0,0"
+                            Padding="5"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            FontSize="15"
+                            Foreground="White">
+                            > Approval status
+                        </Button>
+                    </Grid>
+
+                    <!--  coordinator main window  -->
+                    <Grid Grid.Column="1" Background="#FEF3E2">
+
+                        <TextBlock
+                            Margin="213,9,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            FontFamily="ariel"
+                            FontSize="20"
+                            FontWeight="Medium"
+                            Foreground="#0F2A33">
+                            PROGRAM COORDINATOR
+                        </TextBlock>
+
+                        <!--  table for approval  -->
+                        <DataGrid Width="500" Height="250">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Width="50" Header="No" />
+                                <DataGridTextColumn Width="100" Header="Name" />
+                                <DataGridTextColumn Width="100" Header="Surname" />
+                                <DataGridTextColumn Width="100" Header="Amount" />
+                                <DataGridTextColumn Width="50" Header="Docs" />
+                                <DataGridTemplateColumn Width="100" Header="Status">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <ComboBox>
+                                                <ComboBoxItem Content="Pending" />
+                                                <ComboBoxItem Content="Approved" />
+                                                <ComboBoxItem Content="Declined" />
+                                            </ComboBox>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
