@@ -25,19 +25,24 @@ namespace CMCS_Part1
         {
             landing_page.Visibility = Visibility.Hidden;
             lecturers_page.Visibility = Visibility.Visible;
-            coordinator_page.Visibility = Visibility.Hidden;    
+            coordinator_page.Visibility = Visibility.Hidden; 
+            manager_page.Visibility = Visibility.Hidden;
         }
 
         private void coordinatorButton_Click(object sender, RoutedEventArgs e)
         {
             landing_page.Visibility = Visibility.Hidden;
+            manager_page.Visibility = Visibility.Hidden;
             lecturers_page.Visibility = Visibility.Hidden;
             coordinator_page.Visibility = Visibility.Visible;
         }
 
         private void managerButton_Click(object sender, RoutedEventArgs e)
         {
-
+            manager_page.Visibility = Visibility.Visible;
+            landing_page.Visibility = Visibility.Hidden;
+            lecturers_page.Visibility = Visibility.Hidden;
+            coordinator_page.Visibility = Visibility.Hidden;
         }
 
         private void dashboardButton_Click(object sender, RoutedEventArgs e)
@@ -45,6 +50,50 @@ namespace CMCS_Part1
             landing_page.Visibility = Visibility.Visible;
             lecturers_page.Visibility = Visibility.Hidden;
             coordinator_page.Visibility = Visibility.Hidden;
+        }
+
+        private void dashboardButton2_Click(object sender, RoutedEventArgs e)
+        {
+            landing_page.Visibility = Visibility.Visible;
+            lecturers_page.Visibility = Visibility.Hidden;
+            coordinator_page.Visibility = Visibility.Hidden;
+            manager_page.Visibility = Visibility.Hidden;
+        }
+
+        private void trackClaimsButton_Click(object sender, RoutedEventArgs e)
+        {
+            landing_page.Visibility = Visibility.Hidden;
+            lecturers_page.Visibility = Visibility.Hidden;
+            coordinator_page.Visibility = Visibility.Hidden;
+            manager_page.Visibility = Visibility.Hidden;
+            trackClaims_page.Visibility = Visibility.Visible;
+        }
+
+        private void dashboardButton3_Click(object sender, RoutedEventArgs e)
+        {
+            landing_page.Visibility = Visibility.Visible;
+            lecturers_page.Visibility = Visibility.Hidden;
+            coordinator_page.Visibility = Visibility.Hidden;
+            manager_page.Visibility = Visibility.Hidden;
+            trackClaims_page.Visibility = Visibility.Visible;
+        }
+
+        private void newClaimButton_Click(object sender, RoutedEventArgs e)
+        {
+            landing_page.Visibility = Visibility.Hidden;
+            lecturers_page.Visibility = Visibility.Visible;
+            coordinator_page.Visibility = Visibility.Hidden;
+            manager_page.Visibility = Visibility.Hidden;
+            trackClaims_page.Visibility = Visibility.Hidden;
+        }
+
+        private void reviewClaimsButton_Click(object sender, RoutedEventArgs e)
+        {
+            landing_page.Visibility = Visibility.Hidden;
+            lecturers_page.Visibility = Visibility.Hidden;
+            coordinator_page.Visibility = Visibility.Hidden;
+            manager_page.Visibility = Visibility.Hidden;
+            trackClaims_page.Visibility = Visibility.Visible;
         }
     }
 }
