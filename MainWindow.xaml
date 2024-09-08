@@ -190,13 +190,13 @@
 
                         <Button
                             x:Name="trackClaimsButton"
-                            Click="trackClaimsButton_Click"
                             Height="35"
                             Margin="0,73,0,0"
                             Padding="5"
                             VerticalAlignment="Top"
                             Background="Transparent"
                             BorderBrush="Transparent"
+                            Click="trackClaimsButton_Click"
                             FontSize="15"
                             Foreground="White">
                             > Track Claims
@@ -314,25 +314,43 @@
                                     Content="Upload" />
                             </StackPanel>
 
-
                             <StackPanel>
-                                <Button
-                                    x:Name="submitButton"
-                                    Width="200"
-                                    Height="30"
-                                    Margin="0,15,0,15"
-                                    Background="#708871"
-                                    BorderBrush="Transparent"
-                                    Cursor="Hand"
-                                    Foreground="#0F2A33">
+                                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                    <Button
+                                        x:Name="addNextClaimButton"
+                                        Width="200"
+                                        Height="30"
+                                        Margin="0,15,25,15"
+                                        Background="Gray"
+                                        BorderBrush="Transparent"
+                                        Cursor="Hand"
+                                        Foreground="#0F2A33">
 
-                                    <Button.Resources>
-                                        <Style TargetType="Border">
-                                            <Setter Property="CornerRadius" Value="10" />
-                                        </Style>
-                                    </Button.Resources>
-                                    submit
-                                </Button>
+                                        <Button.Resources>
+                                            <Style TargetType="Border">
+                                                <Setter Property="CornerRadius" Value="10" />
+                                            </Style>
+                                        </Button.Resources>
+                                        Add new claim
+                                    </Button>
+                                    <Button
+                                        x:Name="submitButton"
+                                        Width="200"
+                                        Height="30"
+                                        Margin="0,15,0,15"
+                                        Background="#708871"
+                                        BorderBrush="Transparent"
+                                        Cursor="Hand"
+                                        Foreground="#0F2A33">
+
+                                        <Button.Resources>
+                                            <Style TargetType="Border">
+                                                <Setter Property="CornerRadius" Value="10" />
+                                            </Style>
+                                        </Button.Resources>
+                                        submit
+                                    </Button>
+                                </StackPanel>
                             </StackPanel>
 
                         </StackPanel>
@@ -397,13 +415,13 @@
 
                         <Button
                             x:Name="reviewClaimsButton"
-                            Click="reviewClaimsButton_Click"
                             Height="35"
                             Margin="0,73,0,0"
                             Padding="5"
                             VerticalAlignment="Top"
                             Background="Transparent"
                             BorderBrush="Transparent"
+                            Click="reviewClaimsButton_Click"
                             FontSize="15"
                             Foreground="White">
                             > Review Claims
@@ -480,7 +498,7 @@
                             VerticalAlignment="Top"
                             Background="Transparent"
                             BorderBrush="Transparent"
-                            Click="dashboardButton2_Click"
+                            Click="dashboardButton5_Click"
                             FontSize="15"
                             Foreground="White">
                             > Dashboard
@@ -498,6 +516,7 @@
                             VerticalAlignment="Top"
                             Background="Transparent"
                             BorderBrush="Transparent"
+                            Click="newClaimManagerButton_Click"
                             FontSize="15">
                             > New Claim
                         </Button>
@@ -555,7 +574,7 @@
             </Grid>
         </Grid>
 
-        <!--  Track Claims page  -->
+        <!--  Track Claims lecturer page  -->
         <Grid x:Name="trackClaims_page" Visibility="Hidden">
             <Grid.RowDefinitions>
                 <RowDefinition Height="70" />
@@ -598,15 +617,15 @@
 
                         <Button
                             x:Name="newClaimButton"
-                            Click="newClaimButton_Click"
                             Height="35"
                             Margin="0,38,0,0"
                             Padding="5"
                             VerticalAlignment="Top"
                             Background="Transparent"
                             BorderBrush="Transparent"
-                            Foreground="White"
-                            FontSize="15">
+                            Click="newClaimButton_Click"
+                            FontSize="15"
+                            Foreground="White">
                             > New Claim
                         </Button>
 
@@ -663,7 +682,222 @@
             </Grid>
         </Grid>
 
-    
+        <!--  Review Claims coordinator page  -->
+        <Grid x:Name="reviewClaims_page" Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70" />
+                <RowDefinition Height="440" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid Height="440" VerticalAlignment="Bottom">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="670" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--  side nav  -->
+                    <Grid
+                        Grid.Column="0"
+                        Width="130"
+                        Height="440"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Background="#606676">
+
+                        <Button
+                            x:Name="dashboardButton4"
+                            Height="35"
+                            Margin="0,2,0,0"
+                            Padding="5"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Click="dashboardButton4_Click"
+                            FontSize="15"
+                            Foreground="White">
+                            > Dashboard
+                        </Button>
+
+                        <Grid
+                            Height="35"
+                            Margin="0,73,0,332"
+                            Background="#FEF3E2" />
+
+                        <Button
+                            x:Name="newClaimCoordinatorButton"
+                            Height="35"
+                            Margin="0,38,0,0"
+                            Padding="5"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Click="newClaimCoordinatorButton_Click"
+                            FontSize="15"
+                            Foreground="White">
+                            > New Claim
+                        </Button>
+
+                        <Button
+                            Height="35"
+                            Margin="0,73,0,0"
+                            Padding="5"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            FontSize="15"
+                            Foreground="Black">
+                            > Review Claims
+                        </Button>
+                    </Grid>
+
+                    <!--  review claims main window  -->
+                    <Grid Grid.Column="1" Background="#FEF3E2">
+
+                        <TextBlock
+                            Margin="0,27,0,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            FontFamily="ariel"
+                            FontSize="20"
+                            FontWeight="Medium"
+                            Foreground="#0F2A33">
+                            REVIEW CLAIMS
+                        </TextBlock>
+
+                        <!--  table for approval  -->
+                        <DataGrid Width="500" Height="250">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Width="50" Header="No" />
+                                <DataGridTextColumn Width="100" Header="Name" />
+                                <DataGridTextColumn Width="100" Header="Surname" />
+                                <DataGridTextColumn Width="100" Header="Amount" />
+                                <DataGridTextColumn Width="50" Header="Docs" />
+                                <DataGridTemplateColumn Width="100" Header="Status">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <ComboBox>
+                                                <ComboBoxItem Content="Pending" />
+                                                <ComboBoxItem Content="Approved" />
+                                                <ComboBoxItem Content="Declined" />
+                                            </ComboBox>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <!--  Review Claims manager page  -->
+        <Grid x:Name="reviewClaimsManager_page" Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70" />
+                <RowDefinition Height="440" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid Height="440" VerticalAlignment="Bottom">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="670" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--  side nav  -->
+                    <Grid
+                        Grid.Column="0"
+                        Width="130"
+                        Height="440"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Background="#606676">
+
+                        <Button
+                            x:Name="dashboardButton5"
+                            Height="35"
+                            Margin="0,2,0,0"
+                            Padding="5"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Click="dashboardButton5_Click"
+                            FontSize="15"
+                            Foreground="White">
+                            > Dashboard
+                        </Button>
+
+                        <Grid
+                            Height="35"
+                            Margin="0,73,0,332"
+                            Background="#FEF3E2" />
+
+                        <Button
+                            x:Name="newClaimManagerButton"
+                            Height="35"
+                            Margin="0,38,0,0"
+                            Padding="5"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Click="newClaimManagerButton_Click"
+                            FontSize="15"
+                            Foreground="White">
+                            > New Claim
+                        </Button>
+
+                        <Button
+                            Height="35"
+                            Margin="0,73,0,0"
+                            Padding="5"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            FontSize="15"
+                            Foreground="Black">
+                            > Review Claims
+                        </Button>
+                    </Grid>
+
+                    <!--  review claims main window  -->
+                    <Grid Grid.Column="1" Background="#FEF3E2">
+
+                        <TextBlock
+                            Margin="0,27,0,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            FontFamily="ariel"
+                            FontSize="20"
+                            FontWeight="Medium"
+                            Foreground="#0F2A33">
+                            REVIEW CLAIMS
+                        </TextBlock>
+
+                        <!--  table for approval  -->
+                        <DataGrid Width="500" Height="250">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Width="50" Header="No" />
+                                <DataGridTextColumn Width="100" Header="Name" />
+                                <DataGridTextColumn Width="100" Header="Surname" />
+                                <DataGridTextColumn Width="100" Header="Amount" />
+                                <DataGridTextColumn Width="50" Header="Docs" />
+                                <DataGridTemplateColumn Width="100" Header="Status">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <ComboBox>
+                                                <ComboBoxItem Content="Pending" />
+                                                <ComboBoxItem Content="Approved" />
+                                                <ComboBoxItem Content="Declined" />
+                                            </ComboBox>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+
 
     </Grid>
 </Window>

@@ -93,7 +93,47 @@ namespace CMCS_Part1
             lecturers_page.Visibility = Visibility.Hidden;
             coordinator_page.Visibility = Visibility.Hidden;
             manager_page.Visibility = Visibility.Hidden;
-            trackClaims_page.Visibility = Visibility.Visible;
+            reviewClaims_page.Visibility = Visibility.Visible;
+        }
+
+        private void newClaimCoordinatorButton_Click(object sender, RoutedEventArgs e)
+        {
+            landing_page.Visibility = Visibility.Hidden;
+            lecturers_page.Visibility = Visibility.Hidden;
+            coordinator_page.Visibility = Visibility.Visible;
+            manager_page.Visibility = Visibility.Hidden;
+            trackClaims_page.Visibility = Visibility.Hidden;
+            reviewClaims_page.Visibility= Visibility.Hidden;
+        }
+
+        private void dashboardButton4_Click(object sender, RoutedEventArgs e)
+        {
+            landing_page.Visibility = Visibility.Visible;
+            lecturers_page.Visibility = Visibility.Hidden;
+            coordinator_page.Visibility = Visibility.Hidden;
+            manager_page.Visibility = Visibility.Hidden;
+            trackClaims_page.Visibility = Visibility.Hidden;
+            reviewClaims_page.Visibility= Visibility.Hidden;
+        }
+
+        private void dashboardButton5_Click(object sender, RoutedEventArgs e)
+        {
+            landing_page.Visibility = Visibility.Visible;
+            lecturers_page.Visibility = Visibility.Hidden;
+            coordinator_page.Visibility = Visibility.Hidden;
+            manager_page.Visibility = Visibility.Hidden;
+            trackClaims_page.Visibility = Visibility.Hidden;
+            reviewClaims_page.Visibility = Visibility.Hidden;
+        }
+
+        private void newClaimManagerButton_Click(object sender, RoutedEventArgs e)
+        {
+            landing_page.Visibility = Visibility.Hidden;
+            lecturers_page.Visibility = Visibility.Hidden;
+            coordinator_page.Visibility = Visibility.Hidden;
+            manager_page.Visibility = Visibility.Visible;
+            trackClaims_page.Visibility = Visibility.Hidden;
+            reviewClaims_page.Visibility = Visibility.Hidden;
         }
     }
 }
