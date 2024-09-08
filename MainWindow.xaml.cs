@@ -27,6 +27,9 @@ namespace CMCS_Part1
             lecturers_page.Visibility = Visibility.Visible;
             coordinator_page.Visibility = Visibility.Hidden; 
             manager_page.Visibility = Visibility.Hidden;
+            trackClaims_page.Visibility = Visibility.Hidden;
+            reviewClaims_page.Visibility = Visibility.Hidden;
+            reviewClaimsManager_page.Visibility = Visibility.Hidden;
         }
 
         private void coordinatorButton_Click(object sender, RoutedEventArgs e)
@@ -35,6 +38,9 @@ namespace CMCS_Part1
             manager_page.Visibility = Visibility.Hidden;
             lecturers_page.Visibility = Visibility.Hidden;
             coordinator_page.Visibility = Visibility.Visible;
+            trackClaims_page.Visibility = Visibility.Hidden;
+            reviewClaims_page.Visibility = Visibility.Hidden;
+            reviewClaimsManager_page.Visibility = Visibility.Hidden;
         }
 
         private void managerButton_Click(object sender, RoutedEventArgs e)
@@ -43,6 +49,9 @@ namespace CMCS_Part1
             landing_page.Visibility = Visibility.Hidden;
             lecturers_page.Visibility = Visibility.Hidden;
             coordinator_page.Visibility = Visibility.Hidden;
+            trackClaims_page.Visibility = Visibility.Hidden;
+            reviewClaims_page.Visibility = Visibility.Hidden;
+            reviewClaimsManager_page.Visibility = Visibility.Hidden;
         }
 
         private void dashboardButton_Click(object sender, RoutedEventArgs e)
@@ -50,6 +59,10 @@ namespace CMCS_Part1
             landing_page.Visibility = Visibility.Visible;
             lecturers_page.Visibility = Visibility.Hidden;
             coordinator_page.Visibility = Visibility.Hidden;
+            manager_page.Visibility = Visibility.Hidden;
+            trackClaims_page.Visibility = Visibility.Hidden;
+            reviewClaims_page.Visibility = Visibility.Hidden;
+            reviewClaimsManager_page.Visibility = Visibility.Hidden;
         }
 
         private void dashboardButton2_Click(object sender, RoutedEventArgs e)
@@ -58,6 +71,9 @@ namespace CMCS_Part1
             lecturers_page.Visibility = Visibility.Hidden;
             coordinator_page.Visibility = Visibility.Hidden;
             manager_page.Visibility = Visibility.Hidden;
+            trackClaims_page.Visibility = Visibility.Hidden;
+            reviewClaims_page.Visibility = Visibility.Hidden;
+            reviewClaimsManager_page.Visibility = Visibility.Hidden;
         }
 
         private void trackClaimsButton_Click(object sender, RoutedEventArgs e)
@@ -67,6 +83,8 @@ namespace CMCS_Part1
             coordinator_page.Visibility = Visibility.Hidden;
             manager_page.Visibility = Visibility.Hidden;
             trackClaims_page.Visibility = Visibility.Visible;
+            reviewClaims_page.Visibility = Visibility.Hidden;
+            reviewClaimsManager_page.Visibility = Visibility.Hidden;
         }
 
         private void dashboardButton3_Click(object sender, RoutedEventArgs e)
@@ -75,7 +93,9 @@ namespace CMCS_Part1
             lecturers_page.Visibility = Visibility.Hidden;
             coordinator_page.Visibility = Visibility.Hidden;
             manager_page.Visibility = Visibility.Hidden;
-            trackClaims_page.Visibility = Visibility.Visible;
+            trackClaims_page.Visibility = Visibility.Hidden;
+            reviewClaimsManager_page.Visibility = Visibility.Hidden;
+            reviewClaims_page.Visibility = Visibility.Hidden;  
         }
 
         private void newClaimButton_Click(object sender, RoutedEventArgs e)
@@ -85,6 +105,8 @@ namespace CMCS_Part1
             coordinator_page.Visibility = Visibility.Hidden;
             manager_page.Visibility = Visibility.Hidden;
             trackClaims_page.Visibility = Visibility.Hidden;
+            reviewClaims_page.Visibility = Visibility.Visible;
+            reviewClaimsManager_page.Visibility = Visibility.Hidden;   
         }
 
         private void reviewClaimsButton_Click(object sender, RoutedEventArgs e)
@@ -94,6 +116,8 @@ namespace CMCS_Part1
             coordinator_page.Visibility = Visibility.Hidden;
             manager_page.Visibility = Visibility.Hidden;
             reviewClaims_page.Visibility = Visibility.Visible;
+            trackClaims_page.Visibility = Visibility.Hidden;
+            reviewClaimsManager_page.Visibility = Visibility.Hidden;
         }
 
         private void newClaimCoordinatorButton_Click(object sender, RoutedEventArgs e)
@@ -104,6 +128,7 @@ namespace CMCS_Part1
             manager_page.Visibility = Visibility.Hidden;
             trackClaims_page.Visibility = Visibility.Hidden;
             reviewClaims_page.Visibility= Visibility.Hidden;
+            reviewClaimsManager_page.Visibility= Visibility.Hidden;
         }
 
         private void dashboardButton4_Click(object sender, RoutedEventArgs e)
@@ -114,6 +139,7 @@ namespace CMCS_Part1
             manager_page.Visibility = Visibility.Hidden;
             trackClaims_page.Visibility = Visibility.Hidden;
             reviewClaims_page.Visibility= Visibility.Hidden;
+            reviewClaimsManager_page.Visibility= Visibility.Hidden;
         }
 
         private void dashboardButton5_Click(object sender, RoutedEventArgs e)
@@ -124,6 +150,7 @@ namespace CMCS_Part1
             manager_page.Visibility = Visibility.Hidden;
             trackClaims_page.Visibility = Visibility.Hidden;
             reviewClaims_page.Visibility = Visibility.Hidden;
+            reviewClaimsManager_page.Visibility = Visibility.Hidden;
         }
 
         private void newClaimManagerButton_Click(object sender, RoutedEventArgs e)
@@ -134,6 +161,18 @@ namespace CMCS_Part1
             manager_page.Visibility = Visibility.Visible;
             trackClaims_page.Visibility = Visibility.Hidden;
             reviewClaims_page.Visibility = Visibility.Hidden;
+            reviewClaimsManager_page.Visibility = Visibility.Hidden;
+        }
+
+        private void dashboardButton6_Click(object sender, RoutedEventArgs e)
+        {
+            landing_page.Visibility = Visibility.Visible;
+            lecturers_page.Visibility = Visibility.Hidden;
+            coordinator_page.Visibility = Visibility.Hidden;
+            manager_page.Visibility = Visibility.Hidden;
+            trackClaims_page.Visibility = Visibility.Hidden;
+            reviewClaims_page.Visibility = Visibility.Hidden;
+            reviewClaimsManager_page.Visibility= Visibility.Hidden;
         }
     }
 }

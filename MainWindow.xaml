@@ -491,14 +491,14 @@
                         Background="#606676">
 
                         <Button
-                            x:Name="dashboardButton2"
+                            x:Name="dashboardButton6"
                             Height="35"
                             Margin="0,2,0,0"
                             Padding="5"
                             VerticalAlignment="Top"
                             Background="Transparent"
                             BorderBrush="Transparent"
-                            Click="dashboardButton5_Click"
+                            Click="dashboardButton6_Click"
                             FontSize="15"
                             Foreground="White">
                             > Dashboard
@@ -516,7 +516,6 @@
                             VerticalAlignment="Top"
                             Background="Transparent"
                             BorderBrush="Transparent"
-                            Click="newClaimManagerButton_Click"
                             FontSize="15">
                             > New Claim
                         </Button>
@@ -528,6 +527,7 @@
                             VerticalAlignment="Top"
                             Background="Transparent"
                             BorderBrush="Transparent"
+                            Click="reviewClaimsButton_Click"
                             FontSize="15"
                             Foreground="White">
                             > Review Claims
@@ -545,7 +545,7 @@
                             FontSize="20"
                             FontWeight="Medium"
                             Foreground="#0F2A33">
-                            PROGRAM COORDINATOR
+                            ACADEMIC MANAGER
                         </TextBlock>
 
                         <!--  table for approval  -->
